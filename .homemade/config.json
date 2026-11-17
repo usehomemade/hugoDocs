@@ -4,10 +4,10 @@
     "set -eu; tmp=\"$(mktemp -d)\"; curl -fsSL --retry 3 --connect-timeout 15 --max-time 120 https://github.com/gohugoio/hugo/releases/download/v0.170.1/hugo_extended_0.170.1_linux-amd64.tar.gz -o \"$tmp/hugo.tar.gz\"; tar -xzf \"$tmp/hugo.tar.gz\" -C /usr/local/bin hugo; rm -rf \"$tmp\"; hugo version"
   ],
   "warmup": [
-    "npm ci"
+    "npm install --package-lock=false"
   ],
   "install": [
-    "npm ci"
+    "npm install --package-lock=false"
   ],
   "services": {
     "web": {
